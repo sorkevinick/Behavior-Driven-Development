@@ -10,14 +10,7 @@
 
             Dado que sou um cliente da EBAC-SHOP
             E estou na página de "Detalhes de faturamento"
-            Quando eu digitar o nome "Arthur"
-            E o sobrenome "Augustino"
-            E o país "Brasil"
-            E o endereço "setor universitário, número 444"
-            E a cidade "Goiania"
-            E o cep "76380000"
-            E o telefone "3353-4045"
-            E o e-mail "arthur@gmail.com"
+            Quando eu preencher os campos obrigatórios corretamente
             Então deve exibir uma mensagem "Cadastro Realizado Com Sucesso"
 
 
@@ -28,21 +21,13 @@
             Quando tento digitar o e-mail "arthur.com"
             Então o sistema exibe uma mensagem de erro indicando que o formato do e-mail é inválido
             E não permite a finalização do cadastro
-            E não prossegue para a próxima etapa da compra
 
 
             Cenário: Exibir mensagem de alerta ao tentar cadastrar com campos vazios
 
             Dado que sou um cliente da EBAC-SHOP
             E estou na página de "Detalhes de faturamento"
-            Quando eu digitar o nome ""
-            E o sobrenome ""
-            E o país ""
-            E o endereço ""
-            E a cidade ""
-            E o cep ""
-            E o telefone ""
-            E o e-mail ""
+            Quando eu não preencher os campos obrigatórios
             Então o sistema exibe uma mensagem de alerta indicando que todos os campos obrigatórios devem ser preenchidos
 
 
@@ -50,14 +35,7 @@
 
             Dado que sou um cliente da EBAC-SHOP
             E estou na página de "Detalhes de faturamento"
-            Quando eu digitar o <nome>
-            E o <sobrenome>
-            E o <país>
-            E o <endereço>
-            E a <cidade>
-            E o <cep>
-            E o <telefone>
-            E o <e-mail>
+            Quando eu digitar o <nome> <sobrenome> <país> <endereço> <cidade> <cep> <telefone> <e-mail>
 
             Exemplos:
             | nome | sobrenome | país   | endereço | cidade   | cep      | telefone    | e-mail         |
@@ -67,6 +45,3 @@
 
 1 – Ao inserir dados válidos deve ser direcionado para a tela de checkout
 2 – Ao inserir um dos campos inválidos deve exibir uma mensagem de alerta “Preencha os Campos Obrigatórios”
-
-
-
